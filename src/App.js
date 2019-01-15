@@ -1,25 +1,22 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from './todo.jpg';
 import './App.css';
 
-const Hello = ({ name }) => <h1> {name} </h1>
+const List = ["Learn React", "Learn Redux", "Unlearn Lots"];
+
+const listItems = List.map((item) =><li>{item}</li>);
 
 const App = ({ name = "default" }) => 
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} alt="logo" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            My Important TODO List
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          <Hello name={name}/>
-          </a>
+          <ul>{listItems}</ul>
         </header>
       </div>
 
 export default App;
+
+
