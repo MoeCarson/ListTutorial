@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './todo.jpg';
 import './App.css';
-import TODOList from './TODOList.js';
+import TodoList from './TodoList.js';
+import CreateTodo from './CreateTodo.js';
 
 const listArray = ["Learn React", "Learn Redux", "Unlearn Lots"];
 
@@ -12,17 +13,17 @@ const App = () =>
           <p>
           My Important TODO List
           </p>
-          <form>
+          <form onSubmit={CreateTodo()}>
           <label>Enter Task: &nbsp;
           <input type="text" name="task" value="Some Task" />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit"/>
           </form>
           <br></br>
-
-          <TODOList list={listArray}/>
+          <TodoList list={listArray}/>
         </header>
       </div>
+
 
 export default App;
 

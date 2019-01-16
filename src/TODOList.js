@@ -1,5 +1,5 @@
 import React from 'react';
 
-const TODOList = ({ list }) => list.map((item) => <li>{item}</li>)
+const TodoList = ({ list }) => list.map((item) => <li>{item}</li>)
 
-export default TODOList;
+export default TodoList;
