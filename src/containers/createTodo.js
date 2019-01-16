@@ -4,6 +4,6 @@ import CreateTodo from '../components/CreateTodo';
 
 const mapStateToProps = state => ({ value: state.createTodo.value });
 
-const mapDispatchToProps = dispatch => ({ dispatch() });
+const mapDispatchToProps = dispatch => ({ action: "value" });
 
 export const CreateTodoContainer = connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
