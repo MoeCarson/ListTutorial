@@ -1,2 +1,1 @@
-export { reducer as createTodo } from './createTodo'
-import Provider from react-redux
+export { reducer as reducers } from './createTodo';
