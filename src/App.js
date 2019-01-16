@@ -13,7 +13,7 @@ const App = () =>
           <p>
           My Important TODO List
           </p>
-          <CreateTodo/>
+          <CreateTodo value="Some Task" updateTodo={TodoList(value)}/>
           <br></br>
           <TodoList list={listArray}/>
         </header>

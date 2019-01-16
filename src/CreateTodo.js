@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CreateTodo = () =>
-<form>
+const CreateTodo = ({ value, updateTodo }) =>
+<>
 <label>Enter Task: &nbsp;
-<input type="text" name="task" value="Some Task" />
+<input type="text" name="task" value={value} />
 </label>
-<input type="submit" value="Submit"/>
-</form>
+<input type="submit" value="Submit" OnClick={updateTodo(value)}/>
+</>
 
 export default CreateTodo;
