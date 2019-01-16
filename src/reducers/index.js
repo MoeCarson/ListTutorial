@@ -1,1 +1,1 @@
-export { reducer as reducers } from './createTodo';
+export { reducer as createTodo } from './createTodo';
