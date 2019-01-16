@@ -11,7 +11,7 @@ const App = () =>
         <header className="App-header">
           <img src={logo} alt="logo" />
           <p>
-          My Important TODO List!
+          My Important TODO List
           </p>
           <CreateTodo value="Some Task"/>
           <br></br>
