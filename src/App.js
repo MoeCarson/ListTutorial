@@ -13,12 +13,7 @@ const App = () =>
           <p>
           My Important TODO List
           </p>
-          <form onSubmit={CreateTodo()}>
-          <label>Enter Task: &nbsp;
-          <input type="text" name="task" value="Some Task" />
-          </label>
-          <input type="submit" value="Submit"/>
-          </form>
+          <CreateTodo/>
           <br></br>
           <TodoList list={listArray}/>
         </header>
