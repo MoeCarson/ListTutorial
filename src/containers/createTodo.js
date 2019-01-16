@@ -6,8 +6,8 @@ import * as actions from '../actions';
 const mapStateToProps = state => ({ value: state.createTodo.value });
 
 const mapDispatchToProps = dispatch => ({
-        value: value => dispatch(actions.createTodoUpdated(value)),
-        onClick:  dispatch(actions.buttonClicked())
+        onChange: value => dispatch(actions.createTodoUpdated(value)),
+        onClick:  () => dispatch(actions.buttonClicked())
     });
 
 export const CreateTodoContainer = connect(mapStateToProps, mapDispatchToProps)(CreateTodo);
