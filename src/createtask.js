@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CreateTodo = ({ value, onClick }) =>
+const createTask = ({ value, onClick }) =>
 <>
 <label>Enter Task: &nbsp;
 <input type="text" name="task" value={value} />
@@ -8,4 +8,4 @@ const CreateTodo = ({ value, onClick }) =>
 <input type="submit" value="Submit" onClick={onClick}/>
 </>
 
-export default CreateTodo;
+export default createTask;
