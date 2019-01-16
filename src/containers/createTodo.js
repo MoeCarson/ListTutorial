@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CreateTodo from '../components/createTodo.js';
+import CreateTodo from '../components/CreateTodo';
 
 
 const mapStateToProps = state => ({ return obj });
