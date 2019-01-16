@@ -7,11 +7,6 @@ export const initState = { value: '' }
 // 2) has an export called reducer with signature (state = initState, action) => NEWSTATE
 export const reducer = (state = initState, action) => {
     switch (action.type) {
-      case PLACEHOLDER:
-        return 
-          {
-
-          }
       default:
         return state
     }
