@@ -1,6 +1,6 @@
 import React from 'react';
 
-const createTask = ({ value, onClick }) =>
+const TodoList = ({ value, onClick }) =>
 <>
 <label>Enter Task: &nbsp;
 <input type="text" name="task" value={value} />
@@ -8,4 +8,4 @@ const createTask = ({ value, onClick }) =>
 <input type="submit" value="Submit" onClick={onClick}/>
 </>
 
-export default createTask;
+export default TodoList;

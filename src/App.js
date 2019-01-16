@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './todo.jpg';
 import './App.css';
-import createList from './createlist.js';
-import createTask from './createtask.js';
+import TodoList from './TodoList.js';
+import CreateTodo from './CreateTodo.js';
 
 const listArray = ["Learn React", "Learn Redux", "Unlearn Lots"];
 
@@ -13,9 +13,9 @@ const App = () =>
           <p>
           My Important TODO List
           </p>
-          <createTask value="Some Task"/>
+          <CreateTodo value="Some Task"/>
           <br></br>
-          <createList list={listArray}/>
+          <TodoList list={listArray}/>
         </header>
       </div>
 
