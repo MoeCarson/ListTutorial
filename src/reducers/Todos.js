@@ -1,14 +1,15 @@
 import * as consts from '../consts.js'
-//import { Todos } from './index.js';
 
 export const initState = ({ todos: [] })
 
 export const reducer = (state = initState, action) => {
     switch (action.type) {
         case consts.BUTTON_CLICKED:
-        return {...state, todos: [... state.todos, { name: action.payload, done: false }]}
-      default:
-        return state
+            return {...state, todos: [...state.todos, { name: action.payload, done: false }]}
+        case consts.CHECK_BOX_UPDATED:
+            return {...state, todos: [...state.todos, { name: action.payload, done: true }]}
+        default:
+            return state
     }
 }
 
