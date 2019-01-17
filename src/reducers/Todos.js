@@ -1,6 +1,6 @@
 import * as consts from '../consts.js'
 
-export const initState = ({ todos: [], showDone: false})
+export const initState = ({ todos: [], showDone: true})
 
 export const reducer = (state = initState, action) => {
     switch (action.type) {
@@ -12,6 +12,8 @@ export const reducer = (state = initState, action) => {
                     { ...todo,  done: action.payload.checked }:
                     // otherwise return original todo
                     todo)}
+        case consts.SHOW_DONE_CHECK_BOX:
+            return {...state, showDone: action.payload}
         default:
             return state
     }
