@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from './todo.jpg';
 import './App.css';
-import TodoList from './TodoList.js';
+import Todos from './Todos.js';
 import { CreateTodoContainer } from '../containers/createTodo.js';
+import { CreateTodos } from '../containers/Todos.js';
 
-const listArray = ["Learn React", "Learn Redux", "Unlearn Lots"];
 
 const App = () => 
       <div className="App">
@@ -15,7 +15,7 @@ const App = () =>
           </p>
           <CreateTodoContainer />
           <br></br>
-          <TodoList list={listArray}/>
+          <CreateTodos />
         </header>
       </div>
 
