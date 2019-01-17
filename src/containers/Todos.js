@@ -5,7 +5,6 @@ import * as actions from '../actions';
 const mapStateToProps = state => ({ todo: state.Todos.todo });
 
 const mapDispatchToProps = dispatch => ({
-        onChange: value => dispatch(actions.createTodoUpdated(value)),
         onClick:  () => dispatch(actions.buttonClicked())
     });
 
