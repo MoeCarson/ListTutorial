@@ -7,7 +7,6 @@ const mapStateToProps = state => ({ value: state.createTodo.value });
 
 const mapDispatchToProps = dispatch => ({
         onChange: value => dispatch(actions.createTodoUpdated(value)),
-        onClick:  () => dispatch(actions.buttonClicked())
     });
 
 export const CreateTodoContainer = connect(mapStateToProps, mapDispatchToProps)(CreateTodo);

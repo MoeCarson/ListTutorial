@@ -1,6 +1,6 @@
 import * as consts from '../consts.js'
 //
-export const initState = { value: 'Test' }
+export const initState = { todo: 'Test' }
 
 export const reducer = (state = initState, action) => {
     switch (action.type) {

@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Todos = ({ value }) => <ul><li>{value}</li></ul>
+const Todos = ({ todo }) => <ul><li>{todo}</li></ul>
 
 export default Todos;
