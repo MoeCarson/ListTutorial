@@ -5,7 +5,8 @@ import * as actions from '../actions';
 const mapStateToProps = state => ({ todos: state.Todos.todos });
 
 const mapDispatchToProps = dispatch => ({
-    onChangeCheckBox: value => dispatch(actions.createCeckBoxUpdated(value))
+    onChangeCheckBox: value => dispatch(actions.createCeckBoxUpdated(value)),
+    onChangeShowDone: value => dispatch(actions.actionShowDone(value))
 });
 
 export const TodosContainer = connect(mapStateToProps, mapDispatchToProps)(Todos);
