@@ -9,6 +9,8 @@ export const reducer = (state = initState, action) => {
     switch (action.type) {
         case consts.CREATE_TODO_UPDATED:
         return {...state, value: action.payload}
+        case consts.BUTTON_CLICKED:
+        return {...state, value: ''}
       default:
         return state
     }
