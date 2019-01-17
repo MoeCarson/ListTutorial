@@ -4,8 +4,6 @@ import * as actions from '../actions';
 
 const mapStateToProps = state => ({ todos: state.Todos.todos });
 
-const mapDispatchToProps = dispatch => ({
-        onClick:  () => dispatch(actions.buttonClicked())
-    });
+//const mapDispatchToProps = dispatch => ({});
 
-export const TodosContainer = connect(mapStateToProps, mapDispatchToProps)(Todos);
+export const TodosContainer = connect(mapStateToProps)(Todos);

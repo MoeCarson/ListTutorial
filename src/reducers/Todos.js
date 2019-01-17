@@ -5,7 +5,7 @@ export const initState = ({ todos: [] })
 export const reducer = (state = initState, action) => {
     switch (action.type) {
         case consts.BUTTON_CLICKED:
-        return {...state, todos: [ { name: "This is a todo!", done: false }]}
+        return {...state, todos: [ { name: action.payload, done: false }]}
       default:
         return state
     }
