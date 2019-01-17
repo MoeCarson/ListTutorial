@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Todos = ({ todo, onClick }) => 
+const Todos = ({ todos, onClick }) => 
 <>
 <input type="submit" value="Submit" onClick={onClick}/>
-<ul><li>{todo}</li></ul>
+{todos.map(item => (
+<li key={item}>{item}</li>))}
 </>
 
 export default Todos;
