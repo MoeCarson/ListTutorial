@@ -10,10 +10,9 @@ export const reducer = (state = initState, action) => {
             //return {...state, todos: [...state.todos, { name: action.payload, done: action.payload }]}
             return {...state, todos: state.todos.map(todo => todo.name === action.name ?
                     // transform the one with a matching id
-                    [...state.todos, { name: action.name, done: action.checked }]:
-                    //{ ...todo, done: action.payload } : 
+                    { ...todo, done: action.checked }:
                     // otherwise return original todo
-                    todo)}
+                    state.todos)}
         default:
             return state
     }
