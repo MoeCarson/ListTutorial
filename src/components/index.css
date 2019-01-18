@@ -17,3 +17,8 @@ code {
   float: none;
   margin: 0 auto;
 }
+
+.well {
+  border-style:solid;
+  border-color: aquamarine;
+  }
