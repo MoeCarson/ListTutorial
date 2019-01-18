@@ -14,10 +14,9 @@ const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) =>
 {item.name}
 
 </ListGroupItem>
+
 ))}
 </ListGroup>
 </>
-
-
 
 export default Todos;
