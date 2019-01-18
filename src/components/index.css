@@ -12,13 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-.col-centered{
-  float: none;
-  margin: 0 auto;
-}
-
-.well {
-  border-style:solid;
-  border-color: aquamarine;
-  }

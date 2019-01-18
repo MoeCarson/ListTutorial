@@ -2,22 +2,26 @@ import React from 'react';
 import logo from './todo.jpg';
 import { CreateTodoContainer } from '../containers/createTodo.js';
 import { TodosContainer } from '../containers/Todos.js';
-import { PageHeader } from 'react-bootstrap';
-
+import { Modal, Image } from 'react-bootstrap';
 
 const App = () => 
       <div className="App">
-        <header className="App-header" class="col-md-2 col-centered text-center">
-          <img src={logo} alt="logo" />
-          <PageHeader>
-          My Important TODO List
-          </PageHeader>
-          <CreateTodoContainer />
-          <br></br>
-          <TodosContainer />
-        </header>
+      <div className="static-modal">
+        <Modal.Dialog>
+          <Modal.Header>
+            <Modal.Title>My Important TODO List</Modal.Title>
+          </Modal.Header>
+            <Modal.Body>
+              <div align="center">
+              <Image src={logo} alt="logo" rounded/>
+              </div>
+              <CreateTodoContainer />
+              <br></br>
+                <TodosContainer />
+            </Modal.Body>
+          </Modal.Dialog>
+      </div>;
       </div>
-
 
 export default App;
 

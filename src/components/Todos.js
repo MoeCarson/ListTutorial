@@ -1,11 +1,12 @@
 import React from 'react';
-import { ListGroup, ListGroupItem, Well } from 'react-bootstrap';
+import { ListGroup, ListGroupItem, Well, Label} from 'react-bootstrap';
 
 const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) => 
-<><br></br>
+<>
+<br></br>
 <Well>
 <input type="checkbox" name="showDone" value="test" checked={showDone} onChange={evt => onChangeShowDone( evt.target.checked )}></input>
-&nbsp; Show Completed Todos
+&nbsp; <Label bsStyle="primary">Show Completed Todos</Label>
 </Well><br></br>
 <ListGroup>
 {todos.map(item => (
