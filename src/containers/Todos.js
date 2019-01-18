@@ -1,14 +1,9 @@
 import { connect } from 'react-redux';
 import Todos from '../components/Todos';
 import * as actions from '../actions';
-import { createSelector } from 'reselect';
+import * as selectors from '../selectors.js';
 
-const selectShowDone = state => state.Todos.showDone;
-const selectTodos = state => state.Todos.todos;
-
-const getTodos = createSelector(selectShowDone, selectTodos, (showDone, todos) => (!showDone) ? todos.filter(x=>x.done === false) : todos);
-
-const mapStateToProps = state => ({ todos: getTodos(state), showDone: state.Todos.showDone });
+const mapStateToProps = state => ({ todos: selectors.getTodos(state), showDone: selectors.selectShowDone(state) });
 
 const mapDispatchToProps = dispatch => ({
     onChangeCheckBox: value => dispatch(actions.createCeckBoxUpdated(value)),
