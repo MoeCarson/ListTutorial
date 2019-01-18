@@ -1,21 +1,23 @@
 import React from 'react';
-import { ListGroup, ListGroupItem, Well, Label} from 'react-bootstrap';
+import { ListGroup, ListGroupItem, Well, Label, Checkbox} from 'react-bootstrap';
 
 const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) => 
 <>
 <br></br>
 <Well>
-<input type="checkbox" name="showDone" value="test" checked={showDone} onChange={evt => onChangeShowDone( evt.target.checked )}></input>
+<Checkbox name="showDone" value="test" checked={showDone} onChange={evt => onChangeShowDone( evt.target.checked )}></Checkbox>
 &nbsp; <Label bsStyle="primary">Show Completed Todos</Label>
 </Well><br></br>
-<ListGroup>
+<ListGroup >
 {todos.map(item => (
-<ListGroupItem key={item.name}>{item.name}
-&nbsp; &nbsp; 
-<input type="checkbox" name={item.name} value="test" checked={item.done} onChange={evt => onChangeCheckBox({ checked: evt.target.checked, name: item.name })}></input>
+<ListGroupItem key={item.name}><Checkbox type="checkbox" name={item.name} value="test" checked={item.done} onChange={evt => onChangeCheckBox({ checked: evt.target.checked, name: item.name })}></Checkbox>
+{item.name}
+
 </ListGroupItem>
 ))}
 </ListGroup>
 </>
+
+
 
 export default Todos;
