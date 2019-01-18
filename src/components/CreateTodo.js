@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 const CreateTodo = ({ value, onChange, onClick , disableButton }) =>
 <>
-<label>Enter Task: &nbsp;
-<input type="text" name="task" value={value} onChange={evt => onChange(evt.target.value)}/>
-</label>
+<FormGroup controlId="formControlsTextarea">
+<FormControl componentClass="textarea" placeholder="Enter Task Here" onChange={evt => onChange(evt.target.value)}/>
+</FormGroup>
 <Button bsStyle="primary" disabled={disableButton} onClick={() => onClick(value)}>Submit</Button>
 </>
 
