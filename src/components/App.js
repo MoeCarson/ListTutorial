@@ -2,7 +2,7 @@ import React from 'react'
 import { CreateTodoContainer } from '../containers/createTodo.js'
 import { TodosContainer } from '../containers/Todos.js'
 import { Modal, Image } from 'react-bootstrap'
-
+import { hot } from 'react-hot-loader'
 
 const App = () =>
     <div className="App">
@@ -23,6 +23,6 @@ const App = () =>
         </div>;
     </div>
 
-export default App
+export default hot(module)(App)
 
 

@@ -8,15 +8,11 @@ const outputDirectory = path.resolve(__dirname, 'public')
 const templateDirectory = path.resolve(__dirname, 'src/templates')
 
 const config = {
-    target: 'web',
-    entry: {
-        app: './src/index.js'
-    },
+    //target: 'web',
+    entry: ['./src/index.js'],
     output: {
-        path: outputDirectory,
-        filename: '[name].bundle.js',
-        publicPath: '/',
-        globalObject: 'typeof self !== \'undefined\' ? self : this'
+        path: path.join(__dirname, 'public'),
+        filename: 'bundle.js'
     },
     module: {
         rules: [
@@ -45,10 +41,10 @@ const config = {
             },
         ]
     },
-    node: {
+    /*node: {
         fs: 'empty'
     },
-
+*/
     plugins: [
         new HtmlWebpackPlugin({
             title: 'TODO',
