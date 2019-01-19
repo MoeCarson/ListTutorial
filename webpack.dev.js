@@ -1,5 +1,5 @@
 /* global module */
-
+const path = require('path')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
 const common = require('./webpack.common.js').config
@@ -7,13 +7,16 @@ const common = require('./webpack.common.js').config
 module.exports = merge(common, {
     mode: 'development',
     output: {
-        filename: '[name].bundle.js'
+        filename: 'bundle.js',
+        path: path.join(__dirname, 'public')
     },
     devServer: {
         contentBase: './public',
-        compress: true,
+        //compress: true,
         port: 3001,
-        historyApiFallback: true,
-        watchContentBase: false,
-    }
+        //historyApiFallback: true,
+        //watchContentBase: false,
+    },
+
+    plugins: [new webpack.NamedModulesPlugin()]
 })
