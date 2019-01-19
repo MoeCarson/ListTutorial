@@ -6,18 +6,18 @@ import { Modal, Image } from 'react-bootstrap'
 
 const App = () =>
     <div className="App">
-        <div className="static-modal">
+        <div className="static-modal" style={{textAlign:'center'}}>
             <Modal.Dialog>
                 <Modal.Header>
                     <Modal.Title>My Important TODO List</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <div>
-                        <Image src='/todo.jpg' alt="logo" rounded/>
+                    <Image src='/todo.jpg' alt="logo" width={150} height={150} rounded/>
+                    <div style={{textAlign:'left'}}>
+                        <CreateTodoContainer />
+                        <br></br>
+                        <TodosContainer />
                     </div>
-                    <CreateTodoContainer />
-                    <br></br>
-                    <TodosContainer />
                 </Modal.Body>
             </Modal.Dialog>
         </div>;
