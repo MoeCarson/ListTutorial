@@ -1,7 +1,7 @@
 
-import { reducer } from '../../reducers/Todos.js'
+import { reducer } from '../../src/reducers/Todos.js'
 import expect from 'expect'
-import * as consts from '../../consts.js'
+import * as consts from '../../src/consts.js'
 /*
 will have a root describe block passed the file name example: describe('actions/foo.js', () =>
 
@@ -34,7 +34,7 @@ describe('reducers/Todos.js', () => {
         })
 
 
-        it('should handle CHECK_BOX_UPDATED', () => {
+        it('should handle CHECK_BOX_UPDATED with todo.name === action.payload.name', () => {
             expect(
                 reducer(testState, {
                     type: consts.CHECK_BOX_UPDATED,
@@ -44,6 +44,15 @@ describe('reducers/Todos.js', () => {
                 'showDone': true, 'todos': [
                     {'done': true, 'name': 'Test Name'}
                 ]})
+        })
+
+        it('should handle CHECK_BOX_UPDATED with todo.name != action.payload.name', () => {
+            expect(
+                reducer(testState, {
+                    type: consts.CHECK_BOX_UPDATED,
+                    payload: { checked: true, name: 'Wrong Name' }
+                })
+            ).toEqual(testState)
         })
 
         it('should handle SHOW_DONE_CHECK_BOX', () => {
