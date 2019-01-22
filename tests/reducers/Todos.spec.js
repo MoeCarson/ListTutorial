@@ -1,30 +1,25 @@
 
-import { reducer, sum } from '../../src/reducers/Todos.js'
+import { reducer, initState } from '../../src/reducers/Todos.js'
 import expect from 'expect'
 import * as consts from '../../src/consts.js'
-/*
-will have a root describe block passed the file name example: describe('actions/foo.js', () =>
 
-will have within that root describe a describe for each method tested example: describe('someAction', () =>
-each function describe block will have only as many it('should bla bla bla...' actual unit tests as necc pls do not make 100 unit tests for something like an action which only needs 1 test
-*/
-
-
-const initialState = { todos: [], showDone: true}
 const testState = {'showDone': true, 'todos': [{'done': false, 'name': 'Test Name'}]}
+let state
 
 describe('reducers/Todos.js', () => {
 
+
     describe('reducer', () => {
+        beforeEach( () => state = initState )
 
         it('should return the initial state', () => {
 
-            expect(reducer(undefined, {})).toEqual(initialState)
+            expect(reducer(undefined, {})).toEqual(state)
         })
 
         it('should handle BUTTON_CLICKED', () => {
             expect(
-                reducer(initialState, {
+                reducer(state, {
                     type: consts.BUTTON_CLICKED,
                     payload: 'Test Name'
                 })
@@ -58,14 +53,13 @@ describe('reducers/Todos.js', () => {
 
         it('should handle SHOW_DONE_CHECK_BOX', () => {
             expect(
-                reducer(testState, {
+                reducer(state, {
                     type: consts.SHOW_DONE_CHECK_BOX,
                     payload: false
                 })
             ).toEqual({
-                'showDone': false, 'todos': [
-                    {'done': false, 'name': 'Test Name'}
-                ]})
+                todos: [], showDone: false
+            })
         })
 
     })
