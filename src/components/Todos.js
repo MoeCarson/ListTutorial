@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListGroup, ListGroupItem, Well, Label, Checkbox} from 'react-bootstrap'
+import { ListGroup, ListGroupItem, Well, Checkbox} from 'react-bootstrap'
 
 const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) =>
 <>
