@@ -24,7 +24,7 @@
   "scripts": {
     "start": "webpack-dev-server --hot --config webpack.dev.js",
     "test": "jest --coverage",
-    "test:watch": "npm test --watch"
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.2.3",

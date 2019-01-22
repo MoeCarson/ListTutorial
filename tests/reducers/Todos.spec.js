@@ -1,5 +1,5 @@
 
-import { reducer } from '../../src/reducers/Todos.js'
+import { reducer, sum } from '../../src/reducers/Todos.js'
 import expect from 'expect'
 import * as consts from '../../src/consts.js'
 /*
@@ -8,6 +8,7 @@ will have a root describe block passed the file name example: describe('actions/
 will have within that root describe a describe for each method tested example: describe('someAction', () =>
 each function describe block will have only as many it('should bla bla bla...' actual unit tests as necc pls do not make 100 unit tests for something like an action which only needs 1 test
 */
+
 
 const initialState = { todos: [], showDone: true}
 const testState = {'showDone': true, 'todos': [{'done': false, 'name': 'Test Name'}]}
