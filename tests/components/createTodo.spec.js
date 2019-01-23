@@ -55,5 +55,4 @@ describe('components/creatTodo.js', () => {
         })
     })
 
-
 })
