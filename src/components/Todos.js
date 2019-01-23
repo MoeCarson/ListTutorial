@@ -5,7 +5,7 @@ const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) =>
 <>
 <br></br>
 <Well>
-    <Checkbox type="checkbox" name="showDone" value="test" checked={showDone} onChange={evt => onChangeShowDone( evt.target.checked )}>Show Done Todos</Checkbox>
+    <Checkbox type="checkbox" name="showDone" id="showDoneUnique" value="test" checked={showDone} onChange={evt => onChangeShowDone( evt.target.checked )}>Show Done Todos</Checkbox>
 </Well>
 <br></br>
 <ListGroup >
