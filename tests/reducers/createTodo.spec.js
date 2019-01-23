@@ -6,7 +6,7 @@ import * as consts from '../../src/consts.js'
 //const testState = {'showDone': true, 'todos': [{'done': false, 'name': 'Test Name'}]}
 let state
 
-describe('reducers/Todos.js', () => {
+describe('reducers/createTodo.js', () => {
 
     describe('reducer', () => {
         beforeEach( () => state = initState )
