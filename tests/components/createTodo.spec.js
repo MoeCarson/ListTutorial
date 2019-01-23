@@ -3,9 +3,9 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import createStore from '../../src/store'
 import { CreateTodoContainer } from '../../src/containers/createTodo'
+import { TodosContainer } from '../../src/containers/Todos'
 import expect from 'expect'
 import * as actions from '../../src/actions/index.js'
-import * as selectors from '../../src/selectors.js'
 
 /* global beforeEach */
 
@@ -33,7 +33,7 @@ describe('components/creatTodo.js', () => {
     describe('button', () => {
         beforeEach( () => store = createStore())
         beforeEach( () => store.dispatch(actions.createTodoUpdated('Test Value')))
-        beforeEach( () => createTodo = mount(<Provider store={store}><CreateTodoContainer /></Provider>))
+        beforeEach( () => createTodo = mount(<Provider store={store}><CreateTodoContainer /><TodosContainer /></Provider>))
 
         it('it should clear the textarea when its clicked' , () => {
 
@@ -50,9 +50,8 @@ describe('components/creatTodo.js', () => {
             expect(createTodo.find('[text-area-for-todos]').find('textarea').text()).toEqual('Test Value')
 
             createTodo.find('[button-for-todos]').at(0).simulate('click')
-            const state = selectors.selectTodos
-            expect(state).toEqual(true)
 
+            expect(createTodo.find({ name: 'Test Value' }).find('input').exists()).toEqual(true)
         })
     })
 
