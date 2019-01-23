@@ -2,6 +2,7 @@
 import { reducer, initState } from '../../src/reducers/Todos.js'
 import expect from 'expect'
 import * as consts from '../../src/consts.js'
+/* global beforeEach */
 
 const testState = {'showDone': true, 'todos': [{'done': false, 'name': 'Test Name'}]}
 let state
