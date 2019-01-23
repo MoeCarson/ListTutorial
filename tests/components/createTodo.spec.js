@@ -39,7 +39,7 @@ describe('components/creatTodo.js', () => {
 
             expect(createTodo.find('[text-area-for-todos]').find('textarea').text()).toEqual('Test Value')
 
-            createTodo.find('[button-for-todos]').at(0).simulate('click')
+            createTodo.find('[button-for-todos]').find('button').simulate('click')
 
             expect(createTodo.find('[text-area-for-todos]').find('textarea').text()).toEqual('')
 
@@ -49,7 +49,7 @@ describe('components/creatTodo.js', () => {
 
             expect(createTodo.find('[text-area-for-todos]').find('textarea').text()).toEqual('Test Value')
 
-            createTodo.find('[button-for-todos]').at(0).simulate('click')
+            createTodo.find('[button-for-todos]').find('button').simulate('click')
 
             expect(createTodo.find({ name: 'Test Value' }).find('input').exists()).toEqual(true)
         })
