@@ -5,11 +5,16 @@ import * as actions from './actions/index.js'
 import { set, get } from 'idb-keyval'
 
 
-const middleware = store => next => action => {
+const middleware = store => {
     get('redux').then(val => store.dispatch(actions.createHYDRATE(val)))
-    console.warn(action)
-    next(action)
-    set('redux', store.getState())
+
+    return next => action =>
+    {
+        console.warn(action)
+        next(action)
+        set('redux', store.getState())
+
+    }
 }
 
 const composeEnhancers = R.propOr(compose, '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__', window)

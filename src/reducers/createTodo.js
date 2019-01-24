@@ -10,10 +10,10 @@ export const reducer = (state = initState, action) => {
         return {...state, value: action.payload}
     case consts.BUTTON_CLICKED:
         return {...state, value: ''}
+    case consts.HYDRATE:
+        return action.payload.createTodo
     default:
         return state
     }
 }
 
-
-//export const selector = state => state.createTodo

@@ -15,7 +15,7 @@ export const reducer = (state = initState, action) => {
     case consts.SHOW_DONE_CHECK_BOX:
         return {...state, showDone: action.payload}
     case consts.HYDRATE:
-        return action.payload
+        return action.payload.Todos
     default:
         return state
     }
