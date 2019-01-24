@@ -10,7 +10,7 @@ const middleware = store => {
 
     return next => action =>
     {
-        console.warn(action)
+
         next(action)
         set('redux', store.getState())
 

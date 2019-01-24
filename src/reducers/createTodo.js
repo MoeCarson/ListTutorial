@@ -1,9 +1,9 @@
 import * as consts from '../consts.js'
-
+/// <reference types="../types.d.ts" />
 
 export const initState = { value: '' }
 
-
+/** @type { Reducer<any, any> }  */
 export const reducer = (state = initState, action) => {
     switch (action.type) {
     case consts.CREATE_TODO_UPDATED:

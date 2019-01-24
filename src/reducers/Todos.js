@@ -1,7 +1,9 @@
 import * as consts from '../consts.js'
+/// <reference types="../types.d.ts" />
 
 export const initState = ({ todos: [], showDone: true})
 
+/** @type { Reducer<any, any> }  */
 export const reducer = (state = initState, action) => {
     switch (action.type) {
     case consts.BUTTON_CLICKED:
