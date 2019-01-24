@@ -1,12 +1,18 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import * as reducers from './reducers'
+import * as R from 'ramda'
+import * as actions from './actions/index.js'
+import { set, get } from 'idb-keyval'
+
 
 const middleware = store => next => action => {
-    console.log(action)
+    get('redux').then(val => store.dispatch(actions.createHYDRATE(val)))
+    console.warn(action)
     next(action)
+    set('redux', store.getState())
 }
 
-//export default () => createStore(combineReducers(reducers), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(middleware))
-export default () => createStore(combineReducers(reducers), applyMiddleware(middleware))
+const composeEnhancers = R.propOr(compose, '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__', window)
 
+export default () => createStore(combineReducers(reducers), composeEnhancers( applyMiddleware(middleware) ))
 
