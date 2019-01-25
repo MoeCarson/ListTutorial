@@ -1,9 +1,11 @@
+/// <reference path="../types.d.ts" />
 import React from 'react'
 import { CreateTodoContainer } from '../containers/createTodo.js'
 import { TodosContainer } from '../containers/Todos.js'
 import { Modal, Image } from 'react-bootstrap'
 import { hot } from 'react-hot-loader'
 
+/** @type { React.StatelessComponent }  */
 const App = () =>
     <div className="App">
         <div className="static-modal" style={{textAlign:'center'}}>
@@ -24,5 +26,3 @@ const App = () =>
     </div>
 
 export default hot(module)(App)
-
-
