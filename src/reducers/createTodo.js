@@ -1,5 +1,5 @@
+/// <reference path="../types.d.ts" />
 import * as consts from '../consts.js'
-/// <reference types="../types.d.ts" />
 
 export const initState = { value: '' }
 

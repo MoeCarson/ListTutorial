@@ -1,6 +1,6 @@
+/// <reference path="../types.d.ts" />
 import React from 'react'
 import { Button, FormGroup, FormControl } from 'react-bootstrap'
-/// <reference types="../types.d.ts" />
 
 
 /** @type { React.StatelessComponent<{ value: string, onChange: (arg: string) => any, onClick: (arg: string) => any, disableButton: Boolean }> }  */

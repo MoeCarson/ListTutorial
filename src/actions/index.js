@@ -1,5 +1,6 @@
+/// <reference path="../types.d.ts" />
 import * as consts from '../consts'
-/// <reference types="../types.d.ts" />
+
 
 /** @type { ActionCreator<Boolean> }  */
 export const buttonClicked = payload => ({ type: consts.BUTTON_CLICKED, payload })
