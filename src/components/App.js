@@ -14,7 +14,7 @@ const App = () =>
                     <Modal.Title>My Important TODO List</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Image src='/todo.jpg' alt="logo" width={150} height={150} rounded/>
+                    <Image src='./todo.jpg' alt="logo" width={150} height={150} rounded/>
                     <div style={{textAlign:'left'}}>
                         <CreateTodoContainer />
                         <br></br>
