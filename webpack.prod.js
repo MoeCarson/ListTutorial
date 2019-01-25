@@ -8,7 +8,7 @@ module.exports = merge(common, {
     mode: 'production',
     output: {
         filename: '[hash]-bundle.js',
-        path: path.join(__dirname, 'public')
+        path: path.join(__dirname, 'docs')
     },
 })
 
