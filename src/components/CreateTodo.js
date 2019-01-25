@@ -3,7 +3,7 @@ import { Button, FormGroup, FormControl } from 'react-bootstrap'
 /// <reference types="../types.d.ts" />
 
 
-/** @type { React.StatelessComponent<{ value: Boolean, onChange: (arg: string) => any, onClick: (arg: string) => any, disableButton: Boolean }> }  */
+/** @type { React.StatelessComponent<{ value: string, onChange: (arg: string) => any, onClick: (arg: string) => any, disableButton: Boolean }> }  */
 const CreateTodo = ({ value, onChange, onClick , disableButton }) =>
 <>
 <FormGroup controlId="formControlsTextarea">
