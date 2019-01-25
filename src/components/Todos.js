@@ -1,6 +1,9 @@
 import React from 'react'
 import { ListGroup, ListGroupItem, Well, Checkbox} from 'react-bootstrap'
+/// <reference types="../types.d.ts" />
 
+
+/** @type { React.StatelessComponent<{ todos: { name: string, done: Boolean }[], onChangeCheckBox: ({ checked: Boolean, name: string }) => any, showDone: Boolean, onChangeShowDone: (arg: Boolean) => any }> }  */
 const Todos = ({ todos, onChangeCheckBox, showDone, onChangeShowDone }) =>
 <>
 <br></br>

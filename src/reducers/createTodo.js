@@ -3,6 +3,7 @@ import * as consts from '../consts.js'
 
 export const initState = { value: '' }
 
+/** @type { Reducer<createTodo> }  */
 export const reducer = (state = initState, action) => {
     switch (action.type) {
     case consts.CREATE_TODO_UPDATED:

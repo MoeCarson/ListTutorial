@@ -3,7 +3,7 @@ import * as consts from '../consts.js'
 
 export const initState = ({ todos: [], showDone: true})
 
-/** @type { Reducer<any, any> }  */
+/** @type { Reducer<Todos> }  */
 export const reducer = (state = initState, action) => {
     switch (action.type) {
     case consts.BUTTON_CLICKED:
